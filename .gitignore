@@ -1,0 +1,28 @@
+# IntelliJ Idea
+.idea/
+
+# AWS
+.aws/
+
+# Binaries
+bin/
+
+# covreport
+report.html
+
+#python build files
+/build/
+/dist/
+*.pyc
+*.egg-info
+*.eggs
+__pycache__/
+.pytest_cache
+.coverage
+
+# virtualenv
+.venv
+venv/
+
+# tests reports
+**/cobertura-coverage.xml
