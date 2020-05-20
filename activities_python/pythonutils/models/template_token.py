@@ -1,6 +1,6 @@
 """Module for the adapter token."""
 
-from ..template_error import TemplateError
+from ..mysql_error import TemplateError
 from ..utils import check_reponse_params
 
 

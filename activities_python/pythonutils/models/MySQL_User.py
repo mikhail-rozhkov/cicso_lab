@@ -3,7 +3,7 @@
 from ...common.action_support.base import check_input_params
 
 
-class TemplateUser():
+class MySQLUser():
     """Class representing the adapter user. """
 
     USERNAME = "username"

@@ -6,7 +6,7 @@ from six.moves.urllib.parse import urlparse  # pylint: disable=relative-import
 from requests.utils import is_ipv4_address, is_valid_cidr, address_in_network
 
 from ..common.action_support.base import raise_action_error
-from .template_error import TemplateError
+from .mysql_error import MySQLError
 
 
 def get_optional_value(data, key, default):
@@ -21,7 +21,7 @@ def get_optional_value(data, key, default):
 def check_reponse_params(data, param):
     """Verify the data contains the required response parameter, or raise an error. """
     if param not in data:
-        raise TemplateError(503, "No " + param + " in response", data)
+        raise MySQLError(503, "No " + param + " in response", data)
 
 
 def dump_excluding_secrets(event, lh_options):

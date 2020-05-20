@@ -2,10 +2,10 @@
 
 from ..common.action_support.base import BaseAction
 from ..pythonutils.models.template_launch_params import TemplateLaunchParams
-from ..pythonutils.models.template_target import TemplateTarget
-from ..pythonutils.models.template_user import TemplateUser
-from ..pythonutils.template_adapter import TemplateAdapter
-from ..pythonutils.template_error import TemplateError
+from ..pythonutils.models.MySQL_Target import TemplateTarget
+from ..pythonutils.models.MySQL_User import TemplateUser
+from ..pythonutils.mysql_adapter import TemplateAdapter
+from ..pythonutils.mysql_error import TemplateError
 from ..common.action_support.base import raise_action_error, check_input_params
 
 

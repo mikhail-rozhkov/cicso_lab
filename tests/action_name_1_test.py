@@ -2,7 +2,7 @@ import logging
 import responses
 import unittest
 
-from activities_python.actions.action_hello_world import ActionQuery1
+from activities_python.actions.MySQL_SelectQuery import ActionQuery1
 from activities_python.common.action_support.action_error import ActionError
 
 

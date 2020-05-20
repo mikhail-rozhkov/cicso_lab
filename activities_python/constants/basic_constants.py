@@ -14,7 +14,7 @@ class BasicConstants():
 
     VERIFY_TARGET_URL = '/api/v2/authtoken/'
 
-    TARGET = 'target'
+    TARGET = 'mysql_target'
     ACTIVITY = 'activity'
 
     ACTIVITY_1_NAME = 'hello_world'
@@ -27,3 +27,6 @@ class BasicConstants():
     ACTIVITY_2_TYPE = ACTIVITY + '.' + ACTIVITY_2_NAME
     ACTIVITY_3_TYPE = ACTIVITY + '.' + ACTIVITY_3_NAME
     VERIFY_TARGET_TYPE = TARGET + '.' + TARGET_NAME
+
+    SELECT_NAME = 'select_from_mysql_table'
+    SELECT_TYPE = ACTIVITY + '.' + SELECT_NAME

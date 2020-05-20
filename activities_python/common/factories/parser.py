@@ -5,7 +5,7 @@ import argparse
 
 def produce_parser():
     """Return a new parser instance."""
-    parser = argparse.ArgumentParser(description='Template Python activities adapter.')
+    parser = argparse.ArgumentParser(description='MySQL Rozhkov Python activities adapter.')
     parser.add_argument("--log_level", dest="log_level", help="Set the logging level",
                         choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
     parser.add_argument("-p", "--port", dest="port", help="Server `Port`", type=int)
