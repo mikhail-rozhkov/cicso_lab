@@ -8,10 +8,10 @@ VOLUME /build
 VOLUME /report
 
 COPY ./requires.txt ./
-COPY ./scripts/build_jailkit.sh ./scripts/
 
 RUN apk add --no-cache bash ca-certificates \
  && echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories \
+ && apk add --no-cache libffi-dev openssl-dev \
  && apk add --no-cache --virtual build-deps openssl make alpine-sdk shadow \
  && pip install -U pip \
  && pip install coverage \
@@ -32,7 +32,7 @@ RUN /usr/bin/openssl req -x509 -newkey rsa:2048 -nodes -keyout /secrets/ssl/cert
                          -days 365 \
                          -subj "/C=US/ST=Texas/L=Austin/O=Cisco/OU=longhorn/CN=python" \
  && python setup.py bdist_wheel \
- && mv ./dist/template_adapter-1.0-py2.py3-none-any.whl /wheels
+ && mv ./dist/ad_mysql-1.0-py2.py3-none-any.whl /wheels
 
 
 ##

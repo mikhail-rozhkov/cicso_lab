@@ -10,7 +10,7 @@ setup(
     python_requires='>=2.7.1',
     version="1.0",
     install_requires=required,
-    description='Template Adapter',
+    description='MySQL Adapter',
     packages=find_packages(exclude=['tests', 'tests.*']),
     scripts=['worker/activities-worker'],
     zip_safe=True,

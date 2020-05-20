@@ -59,9 +59,9 @@ class Options:
         if is_lambda:
             self.enable_jail = False
         else:
-            self.enable_jail = True
-            self.jailed_user = os.environ.get("JAIL_USERNAME") or ""
-            self.jailed_dir = os.environ.get("JAIL_DIR") or ""
+            self.enable_jail = False
+            # self.jailed_user = os.environ.get("JAIL_USERNAME") or ""
+            # self.jailed_dir = os.environ.get("JAIL_DIR") or ""
         self.timeout_milliseconds = os.environ.get("TIMEOUT") or self.timeout_milliseconds
         self.read_timeout_milliseconds = os.environ.get("READ_TIMEOUT") or self.read_timeout_milliseconds
         self.write_timeout_milliseconds = os.environ.get("WRITE_TIMEOUT") or self.write_timeout_milliseconds
