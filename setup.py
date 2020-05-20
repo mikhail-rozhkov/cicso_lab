@@ -5,7 +5,7 @@ with open('requires.txt') as f:
     required = f.read().splitlines()
 
 setup(
-    name='template-adapter',
+    name='ad-mysql',
     namespace_packages=['activities_python'],
     python_requires='>=2.7.1',
     version="1.0",

@@ -21,7 +21,6 @@ RUN apk add --no-cache bash ca-certificates \
  && pip install responses \
  && pip wheel -r ./requires.txt -w /wheels \
  && pip install -r ./requires.txt -f /wheels \
- && ./scripts/build_jailkit.sh \
  && mkdir -p /secrets/ssl/cert \
  && touch /secrets/ssl/cert/.disable_cert_validation
 
@@ -51,19 +50,12 @@ ENV JAIL_USERNAME script_executer
 ENV JAIL_DIR /jail
 
 COPY --from=builder /secrets/ /secrets/
-COPY --from=builder /etc/jailkit/* /etc/jailkit/
-COPY --from=builder /usr/sbin/jk_* /usr/sbin/
-COPY --from=builder /usr/bin/jk_* /usr/bin/
-COPY --from=builder /usr/share/jailkit/* /usr/share/jailkit/
 COPY --from=builder /wheels /wheels
-COPY ./scripts/setup_jail.sh /root/setup_jail.sh
 
 RUN apk add --no-cache bash \
  && echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories \
  && apk add --no-cache shadow \
- && pip install /wheels/template_adapter-1.0-py2.py3-none-any.whl -f /wheels \
- && /root/setup_jail.sh \
- && rm -f /root/setup_jail.sh \
+ && pip install /wheels/ad_mysql-1.0-py2.py3-none-any.whl -f /wheels \
  && rm -rf /wheels \
  && apk del shadow
 
