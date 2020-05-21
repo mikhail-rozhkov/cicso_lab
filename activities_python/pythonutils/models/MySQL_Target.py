@@ -10,7 +10,7 @@ class MySQLTarget():
     """Class representing the adapter target. """
 
     # PROTOCOL = "protocol"
-    # HOST = "host"
+    HOST = "host"
     # PORT = "port"
     # DISABLE_SSL = "disable_certificate_validation"
     CHARSET = "charset"

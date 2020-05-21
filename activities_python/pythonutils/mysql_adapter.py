@@ -10,7 +10,7 @@ from requests import ReadTimeout
 from requests import Timeout
 
 from ..constants.basic_constants import BasicConstants
-from .models.template_token import TemplateToken
+# from .models.template_token import TemplateToken
 from .mysql_error import MySQLError
 from .utils import get_proxies
 
